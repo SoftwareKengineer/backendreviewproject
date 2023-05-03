@@ -30,7 +30,7 @@ module.exports = {
       customerid:{
         type: Sequelize.INTEGER,
         allowNull: false,
-        foreignKey: {
+        references: {
           model: 'customers',
           key: 'id'
         }
@@ -55,40 +55,39 @@ module.exports = {
 
 
 
+// this is unused code first try
+// //     up: async (queryInterface, Sequelize) => {
+// //       await queryInterface.addColumn('bill', 'customerId', {
+// //         type: Sequelize.INTEGER,
+// //         allowNull: false,
+// //         references: {
+// //           model: 'customers',
+// //           key: 'id'
+// //         }
+// //       });
+// //     },
+// //   },
+// //   down:async (queryInterface, Sequelize) =>{
+// //     await queryInterface.dropTable('bills');
+// //   }
+// // };
 
-  
-//     up: async (queryInterface, Sequelize) => {
-//       await queryInterface.addColumn('bill', 'customerId', {
-//         type: Sequelize.INTEGER,
-//         allowNull: false,
-//         references: {
-//           model: 'customers',
-//           key: 'id'
-//         }
-//       });
-//     },
-//   },
-//   down:async (queryInterface, Sequelize) =>{
-//     await queryInterface.dropTable('bills');
-//   }
-// };
 
+// // 'use strict';
 
-// 'use strict';
+// // module.exports = {
+// //   up: async (queryInterface, Sequelize) => {
+// //     await queryInterface.addColumn('bill', 'customerId', {
+// //       type: Sequelize.INTEGER,
+// //       allowNull: false,
+// //       references: {
+// //         model: 'customers',
+// //         key: 'id'
+// //       }
+// //     });
+// //   },
 
-// module.exports = {
-//   up: async (queryInterface, Sequelize) => {
-//     await queryInterface.addColumn('bill', 'customerId', {
-//       type: Sequelize.INTEGER,
-//       allowNull: false,
-//       references: {
-//         model: 'customers',
-//         key: 'id'
-//       }
-//     });
-//   },
-
-//   down: async (queryInterface, Sequelize) => {
-//     await queryInterface.removeColumn('bill', 'customerId');
-//   }
-// };
+// //   down: async (queryInterface, Sequelize) => {
+// //     await queryInterface.removeColumn('bill', 'customerId');
+// //   }
+// // };
